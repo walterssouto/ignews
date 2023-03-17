@@ -1,8 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { stripe } from '@/services/stripe'
-import { getSession } from 'next-auth/react'
-import { query as q } from 'faunadb'
 import { NextApiRequest, NextApiResponse } from 'next'
+import { getSession } from 'next-auth/react'
+import { stripe } from '@/services/stripe'
+import { query as q } from 'faunadb'
 import { fauna } from '@/services/fauna'
 
 type User = {
