@@ -3,10 +3,7 @@ import { getStripeJs } from '@/services/stripe-js'
 import { useSession, signIn } from 'next-auth/react'
 import styles from './styles.module.scss'
 
-interface SubscribleButtonProps {
-  priceId: string
-}
-export function SubscribleButton({ priceId }: SubscribleButtonProps) {
+export function SubscribleButton() {
   const { data: session } = useSession()
   
   async function handleSubscrible() {

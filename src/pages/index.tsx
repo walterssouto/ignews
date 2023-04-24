@@ -4,6 +4,7 @@ import { SubscribleButton } from '@/components/SubscribleButton'
 import Head from 'next/head'
 import styles from './home.module.scss'
 import {stripe} from '../services/stripe'
+import Image from 'next/image'
 
 interface HomeProps {
   product: {
@@ -22,10 +23,10 @@ export default function Home({ product }:HomeProps ) {
           <p>Get access to all the publications <br /> 
             <span>for {product.amount} mounth</span>
           </p>
-          <SubscribleButton priceId={product.price_id} />
+          <SubscribleButton />
         </section>
 
-        <img src="./images/avatar.svg" alt="Girl coding" />
+        <Image src="./images/avatar.svg" alt="Girl coding" />
       </main>
     </>
   )
